@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20140716234056) do
     t.string   "gender"
     t.string   "bio"
     t.date     "born"
-    t.string   "timestamps"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,23 +26,20 @@ ActiveRecord::Schema.define(version: 20140716234056) do
   add_index "actors", ["gender"], name: "index_actors_on_gender"
   add_index "actors", ["name"], name: "index_actors_on_name"
 
+  create_table "actors_movies", force: true do |t|
+    t.integer "actor_id"
+    t.integer "movie_id"
+  end
+
   create_table "movies", force: true do |t|
     t.string   "name"
     t.integer  "year"
     t.string   "description"
-    t.string   "timestamps"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "movies", ["name"], name: "index_movies_on_name"
   add_index "movies", ["year"], name: "index_movies_on_year"
-
-  create_table "movies_actors", force: true do |t|
-    t.integer  "movies_id"
-    t.integer  "actors_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end
