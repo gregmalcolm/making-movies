@@ -30,8 +30,8 @@ bundle install
 
 # Generate the sqlite databse
 
-rake db:setup
 rake db:migrate
+rake db:setup
 
 # Start a rails server
 
