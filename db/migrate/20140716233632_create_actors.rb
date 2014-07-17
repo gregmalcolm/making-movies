@@ -5,7 +5,6 @@ class CreateActors < ActiveRecord::Migration
       t.string :gender
       t.string :bio
       t.date :born
-      t.string :timestamps
 
       t.timestamps
     end

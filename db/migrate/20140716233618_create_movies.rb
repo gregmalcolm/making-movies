@@ -4,7 +4,6 @@ class CreateMovies < ActiveRecord::Migration
       t.string :name
       t.integer :year
       t.string :description
-      t.string :timestamps
 
       t.timestamps
     end

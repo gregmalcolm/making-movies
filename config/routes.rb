@@ -1,9 +1,9 @@
 MakingMovies::Application.routes.draw do
-  resources :movies_actors
-
-  resources :actors
+  root 'home#index'
 
   resources :movies
+  resources :actors
+  resources :movies_actors
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -45,7 +45,7 @@ MakingMovies::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
