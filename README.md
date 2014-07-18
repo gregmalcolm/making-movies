@@ -40,31 +40,43 @@ Some Things that you could try include:
 Getting setup
 -------------
 
-# Install ruby
+* Install ruby
 
+```
 https://www.ruby-lang.org/en/downloads/
+```
 
-# Install bundler
+* Install bundler
 
+```
 gem install bundle
+```
 
-# Install gems using bundler
+* Install gems using bundler
 
+```
 cd making-movies
 bundle install
+```
 
-# Generate the sqlite database
+* Generate the sqlite database
 
+```
 rake db:migrate
 rake db:setup
+```
 
-# Start a rails server
+* Start a rails server
 
+```
 rails s
+```
 
-# The app is available at:
+* The app is available at:
 
+```
 http://localhost:3000
+```
 
 Code walkthrough
 ----------------
