@@ -1,16 +1,12 @@
+<div id="moviesPage" style="min-height: 500px;" class="ui-page ui-page-theme-a ui-page-active" tabindex="0" data-url="/movies" data-role="page">
+
+
 <div data-role="header">
   <h1>Movies</h1>
 </div>
 
-<div class="ui-content">  
-  <form>
-    <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
-  </form>
-  <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
-    <% @movies.each do |movie| %>
-      <li><%= link_to movie.name + " (" + movie.year.to_s + ")", movie %></li>
-    <% end %>
-  </ul>
+<div id="movies-content" class="ui-content">
+  <ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a movie..." data-filter-theme="a"></ul>
 </div>
 
 
@@ -18,4 +14,6 @@
   &nbsp;
   <%= link_to 'New Movie', new_movie_path %>
   <%= link_to 'Home', root_path %>
+</div>
+
 </div>

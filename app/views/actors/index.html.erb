@@ -3,7 +3,10 @@
 </div>
 
 <div class="ui-content">
-  <ul>
+  <form>
+    <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+  </form>
+  <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
     <% @actors.each do |actor| %>
       <li><%= link_to actor.name, actor %></li>
     <% end %>
