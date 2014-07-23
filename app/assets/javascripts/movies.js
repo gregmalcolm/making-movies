@@ -24,7 +24,7 @@ $( document ).on( "pagecreate", "#moviesPage", function() {
 			$.each( movies, function (i, movie) {
 				// TODO: this filtering should be done in SQL
 				if (patt.test(movie.name)) {
-					html += '<li><a href="/movies/' + movie.id + '">' + movie.name + '</a></li>';
+					html += Mustache.render('<li><a href="/movies/{{id}}">{{name}} ({{year}})</a></li>', movie);
 				}
 			});
             $ul.html( html );
