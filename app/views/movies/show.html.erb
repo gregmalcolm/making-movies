@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Movie: <%= @movie.name %> </h1>
+<div data-role="header">
+	<h1>Movie: <%= @movie.name %> </h1>
+</div>
 
+<div class="ui-content">
 <p>
   <strong>Year:</strong>
   <%= @movie.year %>
@@ -16,8 +19,13 @@
 <ul>
   <% @movie.actors.each do |actor| %>
   <li><%= link_to actor.name, actor %></li>
-<% end %>
+  <% end %>
 </ul>
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Movies', movies_path %> |
+</div>
+
+<div data-role="footer">
+&nbsp;
+<%= link_to 'Edit', edit_movie_path(@movie) %> 
+<%= link_to 'Movies', movies_path %> 
 <%= link_to 'Home', root_path %>
+</div>

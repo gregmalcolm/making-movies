@@ -1,12 +1,20 @@
-<h1>Actors</h1>
+<div data-role="header">
+	<h1>Actors</h1>
+</div>
 
-<% @actors.each do |actor| %>
-  <ul>
-    <td><%= link_to actor.name, actor %></td>
+<div class="ui-content">
+  <form>
+    <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+  </form>
+  <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+    <% @actors.each do |actor| %>
+      <li><%= link_to actor.name, actor %></li>
+    <% end %>
   </ul>
-<% end %>
+</div>
 
-<br>
-
-<%= link_to 'New Actor', new_actor_path %> |
+<div data-role="footer">
+&nbsp;
+<%= link_to 'New Actor', new_actor_path %> 
 <%= link_to 'Home', root_path %>
+</div>

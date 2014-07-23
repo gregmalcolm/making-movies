@@ -1,12 +1,19 @@
-<h1>Movies</h1>
+<div id="moviesPage" style="min-height: 500px;" class="ui-page ui-page-theme-a ui-page-active" tabindex="0" data-url="/movies" data-role="page">
 
-<% @movies.each do |movie| %>
-  <ul>
-    <td><%= link_to movie.name, movie %></td>
-  </ul>
-<% end %>
 
-<br>
+<div data-role="header">
+  <h1>Movies</h1>
+</div>
 
-<%= link_to 'New Movie', new_movie_path %> |
-<%= link_to 'Home', root_path %>
+<div id="movies-content" class="ui-content">
+  <ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a movie..." data-filter-theme="a"></ul>
+</div>
+
+
+<div data-role="footer">
+  &nbsp;
+  <%= link_to 'New Movie', new_movie_path %>
+  <%= link_to 'Home', root_path %>
+</div>
+
+</div>

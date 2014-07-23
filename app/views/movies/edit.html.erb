@@ -1,7 +1,14 @@
-<h1>Editing movie</h1>
+<div data-role="header">
+	<h1>Editing movie</h1>
+<div>
 
+<div class="ui-content">
 <%= render 'form' %>
+</div>
 
-<%= link_to 'Show', @movie %> |
-<%= link_to 'Back', movies_path %> |
+<div data-role="footer">
+&nbsp;
+<%= link_to 'Show', @movie %> 
+<%= link_to 'Back', movies_path %> 
 <%= link_to 'Home', root_path %>
+</div>
